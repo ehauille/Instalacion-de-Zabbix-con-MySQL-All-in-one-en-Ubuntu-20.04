@@ -27,7 +27,7 @@
 # Verificar versión disponible en el repositorio
 	apt search mysql-server
  
-#Output
+Output
  
 Sorting... Done
 Full Text Search... Done
@@ -58,8 +58,8 @@ and improve security. It checks the strength of password
 and allows the users to set only those passwords which are
 secure enough. Would you like to setup VALIDATE PASSWORD component?
 Press y|Y for Yes, any other key for No: y
-'''
-'''
+
+
 There are three levels of password validation policy:
 LOW Length >= 8
 MEDIUM Length >= 8, numeric, mixed case, and special characters
@@ -67,23 +67,22 @@ STRONG Length >= 8, numeric, mixed case, special characters and dictionary
 file
 Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG:
 Please set the password for root here.
-'''
-'''
+
+
 New password: password
 Re-enter new password: password
 Estimated strength of the password: 100
  
 	Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : y
-'''
-'''
+
+
 By default, a MySQL installation has an anonymous user,
 allowing anyone to log into MySQL without having to have
 a user account created for them. This is intended only for
 testing, and to make the installation go a bit smoother.
 You should remove them before moving into a production
 environment.
-'''
-'''
+
 	Remove anonymous users? (Press y|Y for Yes, any other key for No) : y
 	Success.
  
@@ -92,9 +91,9 @@ Normally, root should only be allowed to connect from
 the root password from the network.
  
 	Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
-Success.
-'''
-'''
+	Success.
+
+
 By default, MySQL comes with a database named 'test' that
 anyone can access. This is also intended only for testing,
 and should be removed before moving into a production
@@ -121,10 +120,9 @@ All done!
 	flush privileges;
 	exit;
  
-character set utf8 - suporte a multilinguagem collate utf8_bin - armazena os
+	character set utf8 - suporte a multilinguagem collate utf8_bin - armazena os
  
-# Instalar Zabbix Server
-# Instalar el repositorio oficial
+# Instalar el repositorio oficial de Zabbix Server
  
 	wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb
 	dpkg -i zabbix-release_5.0-1+focal_all.deb
@@ -149,13 +147,13 @@ Output:
 # Ingresar en el siguiente camino para agregar la contraseña en la base de datos
 	vim /etc/zabbix/zabbix_server.conf
  
-### Option: DBPassword
-# Database password.
-# Comment this line if no password is used.
-#
-# Mandatory: no
-# Default:
-# DBPassword=Password
+	 DBPassword
+	 Database password.
+	 Comment this line if no password is used.
+
+	 Mandatory: no
+	 Default:
+	 DBPassword=Password
  
 # Habilitar servicio e iniciarlo
 	systemctl enable --now zabbix-server
@@ -164,8 +162,7 @@ Output:
 # Verifique los logs de Zabbix Server y verifique si tiene errores
 	tail -n50 /var/log/zabbix/zabbix_server.log
  
-# Instalar frontend
-# Instalando los paquetes
+# Instalar frontend y los paquetes
 	apt install zabbix-frontend-php zabbix-apache-conf
  
 # Configurando PHP
