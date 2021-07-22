@@ -50,7 +50,7 @@ MySQL database server binaries
 # Definir usuario y contraseña root de MySQL
 	mysql_secure_installation
  
-'''
+
 Securing the MySQL server deployment.
 Connecting to MySQL using a blank password.
 VALIDATE PASSWORD COMPONENT can be used to test passwords
