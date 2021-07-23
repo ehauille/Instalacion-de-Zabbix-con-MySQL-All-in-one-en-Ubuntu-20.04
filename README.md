@@ -1,13 +1,12 @@
 # Instalación-de-Zabbix-con-MySQL-All-in-one-en-Ubuntu-20.04
  
 # Ambiente utilizado
-	Servidor Zabbix: MySQL / Zabbix Server / Frontend
-	Sistema Operacional: Ubuntu 20.04
-	Memória: 4GB de RAM
-	CPU: 2 vCPU
-	Disco: 50GB
+	- Servidor Zabbix: MySQL / Zabbix Server / Frontend
+	- Sistema Operacional: Ubuntu 20.04
+	- Memória: 4GB de RAM
+	- CPU: 2 vCPU
+	- Disco: 50GB
  
-# Ajustes después de la instalación del S.O
 # Verificar timezone actual
 	timedatectl status
  
