@@ -118,9 +118,7 @@ All done!
 	grant all privileges on zabbix.* to 'zabbix'@'localhost';
 	flush privileges;
 	exit;
- 
-	character set utf8 - suporte a multilinguagem collate utf8_bin - armazena os
- 
+ 	 
 # Instalar el repositorio oficial de Zabbix Server
  
 	wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb
@@ -131,7 +129,7 @@ All done!
 	apt install zabbix-server-mysql
  
 # Cargar esquema inicial de la base de datos
-	zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | mysql -u (password) -p zabbix
+	zcat /usr/share/doc/zabbix-sql-scripts/mysql/create.sql.gz | mysql -uzabbix -p zabbix
 	
 # Verificar si la base de datos fue creada
 	mysql -u zabbix -p zabbix
